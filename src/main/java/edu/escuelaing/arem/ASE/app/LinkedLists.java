@@ -50,4 +50,12 @@ public class LinkedLists {
             tail = fin;
         }
     }
+    
+    public int cantidad(){
+        return lista.size();
+    }
+    
+    public Nodo getElemento(){
+        
+    }
 }
