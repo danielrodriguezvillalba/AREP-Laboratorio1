@@ -9,7 +9,7 @@ El enunciado nos plantea el reto de escribir un programa con el que se pueda cal
 
 
 ### Desarrollo de la solución
-Inicialmente se plantea una solución en la cual se crea una clase Nodo que almacena el valor real que va a tomar dicho Nodo en la LinkedList, paso siguiente se crea la clase LinkedList la cual plantea una estructura de Nodos y que a su vez maneja y simula el funcionamiento de la estructura de datos LinkedList, al tener esto, se decide crear la clase aplicación, la cual es la encargada de resolver el problema, es decir, esta calcula tanto la media como la desviación estandar de los varoles asignados en esta LinkedList.
+Inicialmente se plantea una solución en la cual se crea una clase Nodo que almacena el valor real que va a tomar dicho Nodo en la LinkedList, paso siguiente se crea la clase LinkedList la cual plantea una estructura de Nodos y que a su vez maneja y simula el funcionamiento de la estructura de datos LinkedList, al tener esto, se decide crear la clase aplicación, la cual es la encargada de resolver el problema, es decir, esta calcula tanto la media como la desviación estandar de los valores asignados en esta LinkedList.
 
 Terminada la soluciónse hacen unas pruebas unitarias, de acuerdo al ejemplo planteado en la guia para asi poder comprobar su buen funcionamiento.
 
