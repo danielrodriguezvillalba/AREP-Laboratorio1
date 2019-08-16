@@ -11,7 +11,7 @@ package edu.escuelaing.arem.ASE.app;
  */
 public class Nodo {
     private Nodo next;
-    private int dato;
+    private double dato;
 
     /**
      * Constructor de la clase Nodo
@@ -33,7 +33,7 @@ public class Nodo {
      * Metodo que retorna el dato del Nodo
      * @return Entero que representa el dato que tiene el dato almacenado
      */
-    public int getDato(){
+    public double getDato(){
         return dato;
     }
     
