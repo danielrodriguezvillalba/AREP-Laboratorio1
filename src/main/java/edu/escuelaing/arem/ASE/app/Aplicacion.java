@@ -6,24 +6,40 @@
 package edu.escuelaing.arem.ASE.app;
 
 /**
- *
+ * Clase que maneja las operaciones generales
  * @author 2115253
  */
 public class Aplicacion {
     LinkedLists lista ;
 
+    /**
+     * Constructor de la clase aplicación 
+     */
     public Aplicacion() {
         lista = new LinkedLists();
     }
     
+    /**
+     * Metodo con el que se agregan elementos en la ultima posicion de la LinkedList
+     * @param dato 
+     */
     public void agregarElemento( int dato ) {
         lista.agregarNodo(dato);
     }
     
+    /**
+     * Metodo con el que se elimina el ultimo elemento de la LinkedList
+     * @throws LinkedListException 
+     */
     public void eliminarElemento( ) throws LinkedListException{
         lista.eliminarNodo();
     }
     
+    /**
+     * Metodo que calcula la media de los valores alojados en la LinkedList
+     * @return Valor Double que representa la media de los valores de la LinkedList
+     * @throws LinkedListException 
+     */
     public double media() throws LinkedListException{
         double med = 0;
         if(lista.cantidad() == 0){
@@ -38,6 +54,11 @@ public class Aplicacion {
         return med;
     }
     
+    /**
+     * Metodo que calcula la desviaciòn estandar de los valores alojados en la LinkedList
+     * @return Valor Double que representa la desviaciín estandar de los valores de la LinkedList
+     * @throws LinkedListException 
+     */
     public double desviacionEstandar() throws LinkedListException{
         double med = media();
         double desvEst = 0;

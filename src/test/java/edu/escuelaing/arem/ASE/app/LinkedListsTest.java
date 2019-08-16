@@ -13,11 +13,18 @@ import static org.junit.Assert.*;
 public class LinkedListsTest {
     Aplicacion aplicacion = new Aplicacion();
     
+    /**
+     * Iniciacion de pruebas
+     */
     @Before
     public void setUpClass() {
         
     }
     
+    /**
+     * Prueba calcula la media de los datos dados
+     * @exception LinkedListException
+     */
     @Test
     public void testDeberiaCalcularMedia() throws LinkedListException {
         double resultadoReal = 550.6;
@@ -35,6 +42,9 @@ public class LinkedListsTest {
         assertTrue(resultadoReal == resProgram);
     }
     
+    /**
+     * Puebra que muestra que la media no se puede sacar en una lista vacia
+     */
     @Test
     public void testNoDeberiaCalcularMediaListaVacia(){
         try {
@@ -45,6 +55,10 @@ public class LinkedListsTest {
         }
     }
     
+    /**
+     * Prueba que calcula la desviacion estandar de los datos dados
+     * @exception LinkedListException
+     */
     @Test
     public void testDeberiaCalcularLaDesvEstandar() throws LinkedListException{
         double resultadoReal = 572.026844746915;
@@ -62,6 +76,9 @@ public class LinkedListsTest {
         assertTrue(resultadoReal == resProgram);
     }
     
+    /**
+     * Puebra que muestra que la media no se puede sacar en una lista vacia
+     */
     @Test
     public void testNoDeberiaCalcularDesviacionEstandarListaVacia(){
         try {

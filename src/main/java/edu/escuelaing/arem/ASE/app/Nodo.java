@@ -13,6 +13,10 @@ public class Nodo {
     private Nodo next;
     private int dato;
 
+    /**
+     * Constructor de la clase Nodo
+     * @param dato 
+     */
     public Nodo( int dato ) {
         this.dato = dato;
     }
@@ -25,10 +29,18 @@ public class Nodo {
         this.next = next;
     }
     
+    /**
+     * Metodo que retorna el dato del Nodo
+     * @return Entero que representa el dato que tiene el dato almacenado
+     */
     public int getDato(){
         return dato;
     }
     
+    /**
+     * Metodo que retorna el Nodo al que apunta el atributo Next
+     * @return Nodo que esta referenciando el atributo next
+     */
     public Nodo getNext(){
         return next;
     }
