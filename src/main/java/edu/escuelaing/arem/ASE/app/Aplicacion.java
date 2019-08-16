@@ -24,14 +24,29 @@ public class Aplicacion {
         lista.eliminarNodo();
     }
     
-    public int media() throws LinkedListException{
+    public double media() throws LinkedListException{
+        double med = 0;
         if(lista.cantidad() == 0){
             throw new LinkedListException("Lista vacia para sacar la media");
         }
         else{
-            for(Node actual: lista){
-                
+            for(int i=0 ;i<lista.cantidad() ; i++){
+                med += lista.getElemento(i).getDato();
             }
         }
+        med = med/lista.cantidad();
+        return med;
+    }
+    
+    public double desviacionEstandar() throws LinkedListException{
+        double med = media();
+        double desvEst = 0;
+        for(int i=0 ;i<lista.cantidad() ; i++){
+            desvEst += Math.pow(Math.abs(lista.getElemento(i).getDato()-med),2);
+        }
+        desvEst = desvEst/(lista.cantidad()-1);
+        desvEst = Math.pow(desvEst,0.5);
+        System.out.println("Dato " + desvEst);
+        return desvEst;
     }
 }

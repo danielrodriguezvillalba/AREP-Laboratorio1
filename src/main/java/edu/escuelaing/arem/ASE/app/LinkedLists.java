@@ -15,47 +15,60 @@ import java.util.ArrayList;
  */
 public class LinkedLists {
     private Nodo head, tail;
-    private ArrayList<Nodo> lista;
+    private int longitud;
 
     public LinkedLists() {
-        lista = new ArrayList<Nodo>();
+        longitud = 0;
     }
     
     public void agregarNodo( int dato ) {
         Nodo temporal = new Nodo(dato);
-        if(lista.size() == 0){
+        if(longitud == 0){
             head = temporal;
             tail = temporal;
         }
         else{
+            tail.addNext(temporal);
             tail = temporal;
-            Nodo fin = lista.get(lista.size()-1);
-            fin.addNext(temporal);
         }
-        lista.add(temporal);
+        longitud++;
     }
     
     public void eliminarNodo() throws LinkedListException{
-        if(lista.size() == 1){
-            lista.remove(lista.size()-1);
+        if(longitud == 1){
             tail = null;
             head = null;
         }
-        else if(lista.size() == 0){
+        else if(longitud == 0){
             throw new LinkedListException("Lista vacia, no se puede eliminar nada");
         }
         else{
-            lista.remove(lista.size()-1);
-            Nodo fin = lista.get(lista.size()-1);
+            
+            Nodo fin = getElemento(longitud-1);
             tail = fin;
+            fin.addNext(null);
         }
+        longitud--;
     }
     
     public int cantidad(){
-        return lista.size();
+        return longitud;
     }
     
-    public Nodo getElemento(){
+    public Nodo getElemento( int pos ) throws LinkedListException{
+        if (pos == 0){
+            return head;
+        }
+        else if (pos < longitud){
+            Nodo temp = head;
+            for(int i=0; i< pos ;i++){
+                temp = temp.getNext();
+            }
+            return temp;
+        }
+        else{
+            throw new LinkedListException("Esta pidiendo un numero fuera de la Lista");
+        }
         
     }
 }

@@ -25,4 +25,11 @@ public class Nodo {
         this.next = next;
     }
     
+    public int getDato(){
+        return dato;
+    }
+    
+    public Nodo getNext(){
+        return next;
+    }
 }
